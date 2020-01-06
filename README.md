@@ -3,7 +3,7 @@
 ### The work is typically gene expression based, and statistical in nature
 
 *** Prerequisites ***
-Please install all libraries required in the code. The libraries imported are typically the first few lines
+Please install all libraries required in the code. The libraries imported are typically mentioned in the first few lines.
 
 ## Introduction:
 Gene expression arrays permit the classification of cancers into subgroups in addition to the discovery of cancer-specific biomarkers. The levels of gene expression can be used to identify the production rates of protein in lung tumor cells relative to healthy cells which helps differentiate the types of cells. This Work, in R, is done mainly to discover new genes that can aid in distinguishing the subtypes of non-small cell lung cancers. 
@@ -21,15 +21,13 @@ Comprehensive molecular profiling of lung adenocarcinoma published in Nature (ht
 ### 2. TCGA LUSC 2016, Cancer Genome Atlas Research Group: 
 Comprehensive molecular profiling of squamous cell lung cancer and published in Nature (https://www.ncbi.nlm.nih.gov/pubmed/?term=22960745). Similar to the previous set, and under the same conditions, this dataset contains both clinical and gene expression information from 552 patient tissue samples (501 tumors, and 51 normal).
 
-## Merging:
-These 2 expression datasets were annotated with the diagnostic label and merged into a single dataset which was saved as a new csv and used in downstream analysis and training.
+## Procedure:
 
-## Minimal Redundancy, Maximal Relevance (MRMR) Filtering:
-Minimum Redundancy Feature Selection is an algorithm commonly used in a method to accurately identify the relationship between features and to narrow down their relevance to a specific outcome variable and is usually described as a Minimum Redundancy Maximum Relevance (MRMR). Feature choice, one of the basic problems in gene expression based prediction as the feature space is extremely large when compared to the sample space. These gene expression datasets often contain features that are relevant but redundant, and MRMR attempts to solve this problem by removing those redundant feature subsets. MRMR has a wide range of applications in many areas, such as cancer diagnosis and pattern recognition. In addition to that, it has been proven to increase the accuracy of the prediction of gene expression based models.
-
-Features can be chosen so that they are mutually distant from each other (not redundant) while still having a "high" correlation to the classification variable. This scheme, referred to as the Minimum Redundancy Maximum Relevance (MRMR) selection, was found to be more powerful than the maximum relevance selection.
-The features are then ranked according to their score, i.e importance relative to the outcome, and top n features are selected. In this project, we used the package
-‘praznik’, https://gitlab.com/mbq/praznik, which offers a function that allows parallelized execution for efficient performance. Top 2000 genes were kept.
-
+### 1. Removing the normal samples as the goal is to perform the analysis on ADLC and SCLC samples.
+### 2. CLustering and visualization of data.
+### 3. Computing the means and statistical significance across the two conditions.
+### 4. Fold difference calculation 
+### 5. Setting the cutoff to select top 13 upregulated and top 13 underregulated genes
+### 6. Finding the differentially expressed genes
 
 
