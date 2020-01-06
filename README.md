@@ -23,11 +23,19 @@ Comprehensive molecular profiling of squamous cell lung cancer and published in 
 
 ## Procedure:
 
-### 1. Removing the normal samples as the goal is to perform the analysis on ADLC and SCLC samples.
-### 2. CLustering and visualization of data.
-### 3. Computing the means and statistical significance across the two conditions.
-### 4. Fold difference calculation 
-### 5. Setting the cutoff to select top 13 upregulated and top 13 underregulated genes
-### 6. Finding the differentially expressed genes
+### 1. Removing the normal samples as the goal is to perform the analysis on ADLC and SCLC samples:
+Only tumor samples were selected for the analysis.
+### 2. CLustering and visualization of data:
+Dendrograms and histograms were plotted to visualize the behavior of the data.
+### 3. Filterinbg out the least variant probes:
+These probes were dropped out of the analysis as research shows that less variance does not add signifiance and makes the procedure computationally expensive.
+### 4. Computing the means and statistical significance across the two conditions:
+Expression means were calculated and t-test was performed to check the significance of each gene probe in the expression set.
+### 5. Fold difference calculation 
+The difference in mean was set to be the fold difference since the data was log transformed and fold differnece based on ratios would not be statistically accurate.
+### 6. Setting the cutoff to select top 13 upregulated and top 13 underregulated genes:
+A breaking point approach was used to select top up and downregulated genes, which resulted in asymmetric cutoffs which is fine since the fold is computed based on difference not ratios.
+### 7. Finding the differentially expressed genes:
+Volcano plots amd heatmaps were generated to visualize the results.
 
 
