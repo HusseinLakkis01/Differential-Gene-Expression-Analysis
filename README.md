@@ -25,9 +25,9 @@ Comprehensive molecular profiling of squamous cell lung cancer and published in 
 
 ### 1. Removing the normal samples as the goal is to perform the analysis on ADLC and SCLC samples:
 Only tumor samples were selected for the analysis.
-### 2. CLustering and visualization of data:
+### 2. Clustering and visualization of data:
 Dendrograms and histograms were plotted to visualize the behavior of the data.
-### 3. Filterinbg out the least variant probes:
+### 3. Filtering out the least variant probes:
 These probes were dropped out of the analysis as research shows that less variance does not add signifiance and makes the procedure computationally expensive.
 ### 4. Computing the means and statistical significance across the two conditions:
 Expression means were calculated and t-test was performed to check the significance of each gene probe in the expression set.
