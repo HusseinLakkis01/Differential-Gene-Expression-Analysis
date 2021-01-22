@@ -155,6 +155,7 @@ abline(h = -log10(pvalue_cutoff), col = "green", lwd = 3)
 
 # Screen for the genes that satisfy the filtering criteria
 # Fold-change filter for "biological" significance
+# thresold selected after testing
 filter_by_fold = fold <= fold_cutoff | fold >= 1.04
 
 # check the size of the filtered by fold 
